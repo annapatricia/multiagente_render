@@ -46,3 +46,21 @@ Request:
   "usuario": "Anna",
   "pergunta": "Qual é o seu hobby?"
 }
+
+Response (example):
+{
+  "resposta": "..."
+}
+## ⚙️ Configuration (Environment Variables)
+
+The orchestrator dynamically routes requests to agent services using environment variables:
+
+- `AGENTE_PESSOAL_URL`  
+  Default: `http://localhost:10001/agente_pessoal`
+
+- `AGENTE_MATEMATICA_URL`  
+  Default: `http://localhost:10002/agente_matematica`
+
+In production (e.g., Render), these variables should point to the public URLs of each deployed agent service.
+
+
